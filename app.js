@@ -38,9 +38,12 @@ app.use(cookieParser());
 app.use('/resource', express.static(path.join(__dirname, './static/resource')))
 app.use('/css', express.static(path.join(__dirname, './css')))
 app.use('/src', express.static(path.join(__dirname, './src')))
+//接口
 app.use('/login', restApi.login);
 app.use('/registered', restApi.registered);
-app.use('/getDepartInfo', restApi.GetDepartInfo);
+app.use('/getDepartInfo', restApi.getDepartInfo);
+app.use('/getUsers', restApi.getUsers);
+//
 app.use('/', routes)
 
 

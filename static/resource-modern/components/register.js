@@ -81,17 +81,6 @@ class Registered extends React.Component {
 						</form>
 					</div>
 				</div>
-
-				<div className="row">
-					<div className="col-xs-1 col-md-1 tabBorder">序号</div>
-					<div className="col-xs-2 col-md-2 tabBorder">姓名</div>
-					<div className="col-xs-2 col-md-2 tabBorder">所属部门</div>
-					<div className="col-xs-1 col-md-1 tabBorder">性别</div>
-					<div className="col-xs-2 col-md-2 tabBorder">电话</div>
-					<div className="col-xs-2 col-md-2 tabBorder">注册日期</div>
-					<div className="col-xs-2 col-md-2 tabBorder">更新日期</div>
-				</div>
-
 			</div>
 		)
 

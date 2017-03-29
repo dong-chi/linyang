@@ -6,10 +6,13 @@
             'ReactDom':baseUrl + 'script/libs/react-dom',
             'BaseView':baseUrl + 'script/baseView',
 
+            //页面画图
+            'LeftTree':baseUrl + 'components/leftTree',
+            'userList':baseUrl + 'components/userList',
+            'login':baseUrl+ 'components/login',
+            'register':baseUrl+ 'components/register',
+
             //组件
-            'LeftTreeCom':baseUrl + 'components/leftTree',
-            'loginCom':baseUrl+ 'script/componentList/loginCom',
-            'regCom':baseUrl+ 'script/componentList/regCom'
         },
         urlArgs: 'v='+(window.ly_version || Date.now())
     };

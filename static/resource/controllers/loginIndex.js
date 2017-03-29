@@ -1,4 +1,4 @@
-define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'loginCom', 'regCom'], function (module, exports, _React, _ReactDom, _BaseView, _loginCom, _regCom) {
+define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'login'], function (module, exports, _React, _ReactDom, _BaseView, _login) {
 	
 
 	Object.defineProperty(exports, "__esModule", {
@@ -11,9 +11,7 @@ define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'loginCom', 'regCo
 
 	var _BaseView2 = _interopRequireDefault(_BaseView);
 
-	var _loginCom2 = _interopRequireDefault(_loginCom);
-
-	var _regCom2 = _interopRequireDefault(_regCom);
+	var _login2 = _interopRequireDefault(_login);
 
 	function _interopRequireDefault(obj) {
 		return obj && obj.__esModule ? obj : {
@@ -28,12 +26,8 @@ define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'loginCom', 'regCo
 		},
 		onCreate: function onCreate() {},
 		onShow: function onShow() {
-			_regCom2.default.renderComponent({}, document.getElementById(this.id));
-			this.$el.append('<p><div class="info">显示信息的地方</div></p><div class="login">注册</div><div class="black">回退吧</div></p>');
-		},
-		goBack: function goBack() {
-			console.log("xxxxxxxxxx");
-			alros.goBack();
+			//regCom.renderComponent({},document.getElementById(this.id));
+			//this.$el.append('<p><div class="info">显示信息的地方</div></p><div class="login">注册</div><div class="black">回退吧</div></p>');
 		},
 		login: function login() {
 			var obj = {

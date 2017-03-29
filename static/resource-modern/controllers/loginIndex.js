@@ -2,8 +2,7 @@ import React from 'React'
 import ReactDom from 'ReactDom'
 import pageView from 'BaseView'
 
-import loginCom from 'loginCom'
-import regCom from 'regCom'
+import login from 'login'
 
 var View = pageView.extend({
 	events:{
@@ -14,12 +13,8 @@ var View = pageView.extend({
 
 	},
 	onShow:function(){
-		regCom.renderComponent({},document.getElementById(this.id));
-		this.$el.append('<p><div class="info">显示信息的地方</div></p><div class="login">注册</div><div class="black">回退吧</div></p>');
-	},
-	goBack:function(){
-		console.log("xxxxxxxxxx");
-		alros.goBack();
+		//regCom.renderComponent({},document.getElementById(this.id));
+		//this.$el.append('<p><div class="info">显示信息的地方</div></p><div class="login">注册</div><div class="black">回退吧</div></p>');
 	},	
 	login: function() {
 		let obj= {

@@ -9,10 +9,20 @@ exports.login = function(req, res) {
 		name: "alros"
 	});
 }
-
+//获得用户列表
+exports.getUsers = function(req, res){
+	mysql.query("select * from user", function(err, result) {
+		if (err) {
+			res.json({
+				err: err
+			});
+			return;
+		}
+		res.json(result);
+	});
+} 
 //获取部门信息
-
-exports.GetDepartInfo = function(req, res) {
+exports.getDepartInfo = function(req, res) {
 	mysql.query("select DepartName,DepartId from Depart", function(err, result) {
 		if (err) {
 			res.json({

@@ -1,7 +1,7 @@
 import React from 'React'
 import ReactDom from 'ReactDom'
 import pageView from 'BaseView'
-import regCom from 'regCom'
+import register from 'register'
 
 var View = pageView.extend({
 	tourViewName: 'registerPage',
@@ -36,7 +36,7 @@ var View = pageView.extend({
 			success:function(data){
 				if(data && data.length > 0){
 					self.defaultInfo.departInfo = data;
-					regCom.renderComponent(self.defaultInfo,document.getElementById(self.id));
+					register.renderComponent(self.defaultInfo,document.getElementById(self.id));
 				}else{
 					alert("部门信息获取失败");
 				}

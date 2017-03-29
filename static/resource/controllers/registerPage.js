@@ -1,4 +1,4 @@
-define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'regCom'], function (module, exports, _React, _ReactDom, _BaseView, _regCom) {
+define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'register'], function (module, exports, _React, _ReactDom, _BaseView, _register) {
 	
 
 	Object.defineProperty(exports, "__esModule", {
@@ -11,7 +11,7 @@ define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'regCom'], functio
 
 	var _BaseView2 = _interopRequireDefault(_BaseView);
 
-	var _regCom2 = _interopRequireDefault(_regCom);
+	var _register2 = _interopRequireDefault(_register);
 
 	function _interopRequireDefault(obj) {
 		return obj && obj.__esModule ? obj : {
@@ -50,7 +50,7 @@ define(['module', 'exports', 'React', 'ReactDom', 'BaseView', 'regCom'], functio
 				success: function success(data) {
 					if (data && data.length > 0) {
 						self.defaultInfo.departInfo = data;
-						_regCom2.default.renderComponent(self.defaultInfo, document.getElementById(self.id));
+						_register2.default.renderComponent(self.defaultInfo, document.getElementById(self.id));
 					} else {
 						alert("部门信息获取失败");
 					}
