@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XXXXXXXXXXXXXX</title>
+	<link rel="stylesheet" href="css/bootstrap.css"></link>
+	<style rel="stylesheet">
+        .tabBorder{
+            border:1px solid rgba(86,61,124,.2)
+        }
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+		(function(){
+			window.globalObj = {};
+			globalObj.baseUrl = "{#=resourceUrl#}";
+			window.ly_version=parseInt(Date.now()/1000,10);
+		})()
+	</script>
+	<div id="main">
+		<div class="main-viewport"></div>
+	</div>
+	{#=config#}
+	<script type="text/javascript">
+		(function(){
+			document.write('<script src="{#=jsBaseUrl#}alros.seed.build.js" pdconfig="'+ globalObj.baseUrl +'resource/rconfig.js?v='+ window.ly_version +'"><\/script>');
+		})()
+	</script>
+</body>
+</html>
