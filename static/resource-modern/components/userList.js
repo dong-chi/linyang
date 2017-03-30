@@ -6,6 +6,7 @@ class UserList extends React.Component{
 		super(props);
 	}
 	render(){
+		let {data} = this.props.opts;
 		return(
 			<div className="container">
 				<div className="row">
@@ -17,7 +18,17 @@ class UserList extends React.Component{
 					<div className="col-xs-2 col-md-2 tabBorder">注册日期</div>
 					<div className="col-xs-2 col-md-2 tabBorder">更新日期</div>
 				</div>
-				
+				{data.map((val, key) => {
+					return <div className="row" key={key}>
+								<div className="col-xs-1 col-md-1 tabBorder">{key}</div>
+								<div className="col-xs-2 col-md-2 tabBorder">{val.UserName}</div>
+								<div className="col-xs-2 col-md-2 tabBorder">{val.UserName}</div>
+								<div className="col-xs-1 col-md-1 tabBorder">{val.Sex}</div>
+								<div className="col-xs-2 col-md-2 tabBorder">{val.Phone}</div>
+								<div className="col-xs-2 col-md-2 tabBorder">{val.AddDate}</div>
+								<div className="col-xs-2 col-md-2 tabBorder">{val.EditDate}</div>
+							</div>
+				})}
 			</div>
 		)
 	}

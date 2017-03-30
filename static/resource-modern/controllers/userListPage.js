@@ -1,6 +1,6 @@
-import React from 'React'
-import ReactDom from 'ReactDom'
+
 import pageView from 'BaseView'
+import userList from 'userList'
 
 var View = pageView.extend({
 	events:{
@@ -10,16 +10,22 @@ var View = pageView.extend({
 
 	},
 	onShow:function(){
-
+		this.getUserList();
 	},	
 	getUserList: function() {
+		let self = this;
 		$.ajax({
 			type:"get",
-			url:"/getUsers",
+			url:"/getUsers_if",
 			dataType:"json",
-			data:obj,
 			success:function(data){
-				console.log(data);
+				//console.log(data);
+				let opts={
+					data
+				};
+				userList.renderComponent(opts,document.getElementById(self.id),function(){
+
+				});
 			},
 			error:function(){
 

@@ -39,10 +39,10 @@ app.use('/resource', express.static(path.join(__dirname, './static/resource')))
 app.use('/css', express.static(path.join(__dirname, './css')))
 app.use('/src', express.static(path.join(__dirname, './src')))
 //接口
-app.use('/login', restApi.login);
-app.use('/registered', restApi.registered);
-app.use('/getDepartInfo', restApi.getDepartInfo);
-app.use('/getUsers', restApi.getUsers);
+app.use('/login_if', restApi.login);
+app.use('/registered_if', restApi.registered);
+app.use('/getDepartInfo_if', restApi.getDepartInfo);
+app.use('/getUsers_if', restApi.getUsers);
 //
 app.use('/', routes)
 
